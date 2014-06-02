@@ -173,7 +173,7 @@ class GLViewWidget(QtOpenGL.QGLWidget):
         self.setProjection(region=region)
         self.setModelview()
         bgcolor = self.opts['bgcolor']
-        glClearColor(bgcolor.red(), bgcolor.green(), bgcolor.blue(), 1.0)
+        glClearColor(bgcolor.redF(), bgcolor.greenF(), bgcolor.blueF(), 1.0)
         glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT )
         self.drawItemTree(useItemNames=useItemNames)
         
